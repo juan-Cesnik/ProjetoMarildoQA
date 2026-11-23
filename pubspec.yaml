@@ -1,0 +1,14 @@
+name: task_app_qa
+description: Projeto de apoio aos testes de qualidade do Task App.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true

@@ -1,0 +1,26 @@
+COMO APLICAR A ESTRUTURA
+
+1. Faça backup ou commit do estado atual do repositório.
+2. Copie o conteúdo desta pasta para a raiz do repositório ProjetoMarildoQA, mantendo a estrutura de diretórios.
+3. Confirme que os novos arquivos ficaram nestes caminhos:
+   - pubspec.yaml
+   - lib/utils/task_validations.dart
+   - lib/services/task_service.dart
+   - test/task_validations_test.dart
+   - test/task_service_test.dart
+   - .github/workflows/flutter-tests.yml
+4. Os arquivos antigos na raiz podem ser removidos depois de conferir os novos:
+   - task_validations_test.dart
+   - task_integration_test.dart
+   - task_service.dart
+   - task_validations.dart dart
+   - flutter-tests.yml
+5. Abra o terminal na raiz do projeto e execute:
+   flutter pub get
+   flutter test
+6. Só registre os resultados no relatório depois de executar os testes e guardar a saída real.
+
+IMPORTANTE:
+- O workflow só será reconhecido pelo GitHub Actions quando estiver em .github/workflows/.
+- Não foi possível executar Flutter neste ambiente de preparação. Portanto, os testes ainda NÃO foram validados por execução.
+- TI01 usa armazenamento em memória; não representa teste real do Firebase.
