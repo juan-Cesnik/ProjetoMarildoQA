@@ -1,0 +1,24 @@
+bool emailValido(String email) {
+  return RegExp(r'^[^@\s]+@[^@\s]+\.[^@\s]+$')
+      .hasMatch(email.trim());
+}
+
+bool tituloValido(String titulo) {
+  return titulo.trim().isNotEmpty;
+}
+
+bool alternarStatus(bool statusAtual) {
+  return !statusAtual;
+}
+
+String mensagemErroLogin(String codigo) {
+  const erros = {
+    'invalid-email': 'E-mail inválido',
+    'wrong-password': 'Senha incorreta',
+    'user-not-found': 'Usuário não encontrado',
+    'invalid-credential': 'E-mail ou senha inválidos',
+  };
+
+  return erros[codigo] ??
+      'Não foi possível realizar o login';
+}
